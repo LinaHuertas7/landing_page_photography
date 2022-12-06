@@ -1,0 +1,36 @@
+.introduction {
+  display: grid;
+  grid-template-columns: 100%;
+
+  &__information {
+    background-color: $primary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    min-height: 450px;
+  }
+
+  &__indicationImg {
+    width: 70%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    left: -15px;
+  }
+
+  .introduction__side {
+    grid-area: side;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    background-image: url('../img/img__introduction__side.png');
+  }
+}

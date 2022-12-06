@@ -1,0 +1,12 @@
+@mixin position($sticky) {
+    -webkit-position: $sticky;
+        -moz-position: $sticky;
+        -ms-position: $sticky;
+            -o-position: $sticky;
+            position: $sticky;
+}
+
+@mixin image($whidth, $height){
+    width: $whidth;
+    height: $height;
+}

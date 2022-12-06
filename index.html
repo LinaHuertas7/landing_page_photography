@@ -9,30 +9,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion photography</title>
     <meta name="description" content="Este sitio en un landing de Lina">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
     <!-- <meta name="keywords" content="Icono, CSS3, Javascript"> -->
 </head>
 <!-- Search Engine Optimization -->
 <body>
     <!-- BEM -->
     <header class="header"><!-- esto hace parte del body -->
-        <h1 class="header__title"><span>Marca</span><a href="#"><img class="header__img" src="" alt="Logo" /></a></h1>
-        <h1 class="header__title header__title--red">Diferente</h1>
+        <h1 class="header__title"><img class="header__img" src="img/logo-w.png" alt="Logo" /></a></h1>
+        <nav class="menu">
+            <ul class="menu__list">
+                <li class="menu__item"><img src="img/responsive-desktop.png" alt="Desktop device image" srcset=""></li>
+                <li class="menu__item"><img src="img/responsive-laptop.png" alt="Laptop device image" srcset=""></li>
+                <li class="menu__item"><img src="img/responsive-tablet.png" alt="Tablet device image" srcset=""></li>
+                <li class="menu__item"><img src="img/responsive-phone-horizontal.png" alt="Horizontal phone device image" srcset=""></li>
+                <li class="menu__item"><img src="img/responsive-phone.png" alt="Phone device image" srcset=""></li>
+            </ul>
+        </nav>
+        <img class="header__img header__img--close" src="img/icon-close.png" alt="Close Button" srcset="">
     </header>
-    <nav class="menu">
-        <ul class="menu__list">
-            <li class="menu__item">Icono dispositivo 1</li>
-            <li class="menu__item">Icono dispositivo 2</li>
-            <li class="menu__item menu__item--red">Icono dispositivo 3</li>
-            <li class="menu__item">Icono dispositivo 4</li>
-        </ul>
-    </nav>
     <main>
         <!--intro seccion-->
-        <section"" class="introduction">
+        <section class="introduction">
             <article class="introduction__information"><!--Aca yo pondria un div dentro de la seccion, OK-->
                 <figure class="introduction__indicationImg">
-                    <img class="introduction__img" src="" alt="img-1" srcset="" title="Description de imágen" alt="Esta es una imagen de una mujer">
+                    <img class="introduction__img" src="img/img__woman--introduction.jpeg" alt="img-1" srcset="" title="Description de imágen" alt="Esta es una imagen de una mujer">
                 </figure>
                 <h3 class="introduction__title introduction__title--author">LINDA HAMILTON</h3>
                 <p class="introduction__description">Your Profesional photographer</p>

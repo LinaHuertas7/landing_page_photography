@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    @include position(sticky);
+    z-index: 1;
+    top: 0;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $tertiary-color;
+    padding: 0rem 1rem;
+    .header__img{
+        margin: 0.7rem 0rem;
+        cursor: pointer;
+    }
+    .header__img--close{
+        &:hover{
+            background-color: $hover-color-device;
+        }
+    }
+    
+}
+
+.menu{
+    display: none;
+}

@@ -10,27 +10,84 @@
     align-items: center;
     gap: 1rem;
     padding: 1rem;
-    min-height: 450px;
+    min-height: 566px;
   }
 
   &__indicationImg {
-    width: 70%;
     height: auto;
     overflow: hidden;
+    width: 75%;
   }
 
   &__img {
-    width: 100%;
     height: auto;
+    left: -52px;
     position: relative;
-    left: -15px;
+    width: 146%;
   }
 
-  .introduction__side {
-    grid-area: side;
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: bottom;
-    background-image: url('../img/img__introduction__side.png');
+  &__title{
+    color: $white-color;
+    letter-spacing: 3px;
+    margin-bottom: 0.7rem;
+    margin-top: 1rem;
+    font: {
+      family: $roboto-font-family;
+      size: 1.25rem;
+      weight:550;
+    }
+  }
+
+  &__description{
+    color: $white-color;
+    text-align: center;
+    word-wrap: break-word;
+    font: {
+      family: $roboto-font-family;
+      size: 1rem;
+      weight: 400;
+    }
+  }
+
+  &__side {
+    margin-bottom: 6rem;
+    min-height: 626px;
+    position: relative;
+    margin-left: 2rem;
+    word-wrap: break-word;
+    &::before{
+      background: {
+        image: url("../img/img__introduction__side.png");
+        position-x: center;
+        position-y: bottom;
+        repeat: no-repeat;
+        size: 256px auto;
+      }
+      bottom: 12%;
+      content: "";
+      left: 0%;
+      opacity: 0.1;
+      position: absolute;
+      right: 0%;
+      top: 0%;
+    }
+  }
+
+  &__slogan{
+    line-height: 1.1;
+    margin-top: 6rem;
+    font: {
+      family: $cursive-font-family;
+      size: 2.25rem;
+      weight: 400;
+    }
+  }
+
+  &__line{
+    border-left: 20px solid $primary-color;
+    height: 50%;
+    left: 84%;
+    position: absolute;
+    top: 43%;
   }
 }

@@ -10,3 +10,42 @@
     width: $whidth;
     height: $height;
 }
+
+@mixin title-img($background-color){
+    display: flex;
+    background-color: $background-color;
+    justify-content: center;
+}
+
+@mixin background-img ($url-img, $height){
+    position: relative;
+    min-height: $height;
+    background: {
+        position-x: center;
+        repeat: no-repeat;
+        image: url($url-img)
+    }
+}
+
+@mixin description-square($top, $left, $width){
+    font-family: 'Open Sans',sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    top: $top;
+    left: $left;
+    word-wrap: break-word;
+    position: absolute;
+    background-color: $white-color;
+    width: $width;
+}
+@mixin link-square($bottom, $left){
+    font-family: Ubuntu, sans-serif;
+    text-decoration: none;
+    color: $primary-color;
+    position: absolute;
+    bottom: $bottom;
+    left: $left;
+    font-size: 0.875rem;
+    letter-spacing: 3px;
+    
+}

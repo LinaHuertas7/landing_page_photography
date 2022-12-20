@@ -1,67 +1,67 @@
-.projects{
-    background-color: $tertiary-color;
-    min-height: 500px;
-    padding: 3rem 0rem 0rem;
-    &__recommendations{
-        margin: 0rem 0.5rem;
-        min-height: 674px;
-        position: relative;
-        background: {
-            image: url("../img/projects__background__img.jpeg");
-            position-x: center;
-            repeat:no-repeat;
-            size: 282%;
-        }
+.projects {
+  background-color: $tertiary-color;
+  min-height: 500px;
+  padding: 3rem 0rem 0rem;
+  &__recommendations {
+    margin: 0rem 0.5rem;
+    min-height: 674px;
+    position: relative;
+    background: {
+      image: url('../img/projects__background__img.jpeg');
+      position-x: center;
+      repeat: no-repeat;
+      size: 282%;
     }
-    &__side{
-        @include title-img(#34421e);
-        margin: 1.5rem 0.5rem 0rem;
-        padding: 6.5rem 0rem;
+  }
+  &__side {
+    @include title-img(#34421e);
+    margin: 1.5rem 0.5rem 0rem;
+    padding: 6.5rem 0rem;
+  }
+  &__description {
+    @include description-square(46%, true, false, 85%);
+    padding: 2rem 0rem 4.7rem 0.5rem;
+  }
+  &__link {
+    @include link-square(5%, 2%);
+  }
+  &__information {
+    align-items: center;
+    background-color: $primary-color;
+    color: $white-color;
+    display: flex;
+    flex-direction: column;
+    margin-top: 10rem;
+    min-height: 565px;
+    text-align: center;
+  }
+  &__group {
+    margin: 7rem 0rem 1rem;
+  }
+  &__title {
+    line-height: 1.2;
+    text-align: center;
+    font: {
+      family: $cursive-font-family;
+      size: 1.875rem;
+      weight: 300;
     }
-    &__description{
-        @include description-square(46%,0%,280px);
-        padding: 2rem 0rem 4.7rem 0.5rem;
+  }
+  &__paragraph {
+    line-height: 1.6;
+    margin-bottom: 8rem;
+    width: 53%;
+    font: {
+      family: 'Open Sans', sans-serif;
+      size: 1rem;
     }
-    &__link{
-        @include link-square(5%,2%);
+  }
+  &__sideInformation {
+    min-height: 569px;
+    background: {
+      image: url('../img/projects__information__basquetbol.jpeg');
+      position-x: right;
+      size: cover;
     }
-    &__information{
-        align-items: center;
-        background-color: $primary-color;
-        color: $white-color;
-        display: flex;
-        flex-direction: column;
-        margin-top: 10rem;
-        min-height: 565px;
-        text-align: center;
-    }
-    &__group{
-        margin: 7rem 0rem 1rem;
-    }
-    &__title{
-        line-height: 1.2;
-        text-align: center;
-        font: {
-            family: $cursive-font-family; 
-            size: 1.875rem;
-            weight: 300;
-        };
-    }
-    &__paragraph{
-        line-height: 1.6;
-        margin-bottom: 8rem;
-        width: 53%;
-        font: {
-            family: 'Open Sans',sans-serif;
-            size: 1rem;
-        }
-    }
-    &__sideInformation{
-        min-height: 569px;
-        background: {
-            image: url("../img/projects__information__basquetbol.jpeg");
-            position-x: right;
-            size: cover;
-        };
-    }
+  }
 }

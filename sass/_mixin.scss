@@ -1,51 +1,56 @@
 @mixin position($sticky) {
-    -webkit-position: $sticky;
-        -moz-position: $sticky;
-        -ms-position: $sticky;
-            -o-position: $sticky;
-            position: $sticky;
+  -webkit-position: $sticky;
+  -moz-position: $sticky;
+  -ms-position: $sticky;
+  -o-position: $sticky;
+  position: $sticky;
 }
 
-@mixin image($whidth, $height, $left){
-    height: $height;
-    left: $left;
-    width: $whidth;
+@mixin image($whidth, $height, $left) {
+  height: $height;
+  left: $left;
+  width: $whidth;
 }
 
-@mixin title-img($background-color){
-    background-color: $background-color;
-    display: flex;
-    justify-content: center;
+@mixin title-img($background-color) {
+  background-color: $background-color;
+  display: flex;
+  justify-content: center;
 }
 
-@mixin background-img ($url-img, $height){
-    min-height: $height;
-    position: relative;
-    background: {
-        image: url($url-img);
-        position-x: center;
-        repeat: no-repeat;
-    }
+@mixin background-img($url-img, $height) {
+  min-height: $height;
+  position: relative;
+  background: {
+    image: url($url-img);
+    position-x: center;
+    repeat: no-repeat;
+  }
 }
 
-@mixin description-square($top, $left, $width){
-    background-color: $white-color;
-    font-family: 'Open Sans',sans-serif;
-    font-size: 1rem;
-    left: $left;
-    line-height: 1.6;
-    position: absolute;
-    top: $top;
-    width: $width;
-    word-wrap: break-word;
+@mixin description-square($top, $leftP, $rightP, $width) {
+  background-color: $white-color;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+  position: absolute;
+  top: $top;
+  width: $width;
+  word-wrap: break-word;
+  @if $leftP {
+    left: 0;
+  }
+  @if $rightP {
+    right: 0;
+  }
 }
-@mixin link-square($bottom, $left){
-    bottom: $bottom;
-    color: $primary-color;
-    font-family: Ubuntu, sans-serif;
-    font-size: 0.875rem;
-    left: $left;
-    letter-spacing: 3px;
-    position: absolute;
-    text-decoration: none;
+@mixin link-square($bottom, $left) {
+  bottom: $bottom;
+  color: $primary-color;
+  font-family: Ubuntu, sans-serif;
+  font-size: 0.875rem;
+  left: $left;
+  letter-spacing: 3px;
+  position: absolute;
+  text-decoration: none;
 }

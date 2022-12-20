@@ -1,19 +1,19 @@
-.about{
-    min-height: 655px;
-    &__side{
-        @include title-img(#c19434);
-        margin: 2.5rem 0.5rem 5rem;
-        padding: 8.5rem 0rem;
-    }
-    &__background{
-        @include background-img("../img/about__background__img.jpeg",726px);
-        margin: 8rem 0.5rem 3rem;
-    }
-    &__description{
-        @include description-square(50%,15%,308px);
-        padding: 2rem 0.5rem 7rem;
-    }
-    &__link{
-        @include link-square(9%,17%);
-    }
+.about {
+  min-height: 655px;
+  &__side {
+    @include title-img(#c19434);
+    margin: 2.5rem 0.5rem 5rem;
+    padding: 8.5rem 0rem;
+  }
+  &__background {
+    @include background-img('../img/about__background__img.jpeg', 726px);
+    margin: 8rem 0.5rem 3rem;
+  }
+  &__description {
+    @include description-square(50%, false, true, 85%);
+    padding: 2rem 0.5rem 7rem;
+  }
+  &__link {
+    @include link-square(9%, 17%);
+  }
 }

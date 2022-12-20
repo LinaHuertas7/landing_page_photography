@@ -1,19 +1,19 @@
 *{
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 .header{
     @include position(sticky);
-    z-index: 1;
+    align-items: center;
+    background-color: $tertiary-color;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.7rem 1rem;
     top: 0;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $tertiary-color;
-    padding: 0.7rem 1rem;
+    z-index: 1;
     &__img{
         cursor: pointer;
     }

@@ -3,14 +3,14 @@
   grid-template-columns: 100%;
 
   &__information {
+    align-items: center;
     background-color: $primary-color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    padding: 1rem;
+    justify-content: center;
     min-height: 566px;
+    padding: 1rem;
   }
 
   &__indicationImg {
@@ -51,9 +51,9 @@
 
   &__side {
     margin-bottom: 6rem;
+    margin-left: 2rem;
     min-height: 626px;
     position: relative;
-    margin-left: 2rem;
     word-wrap: break-word;
     &::before{
       background: {

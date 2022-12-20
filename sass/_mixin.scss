@@ -6,46 +6,46 @@
             position: $sticky;
 }
 
-@mixin image($whidth, $height){
-    width: $whidth;
+@mixin image($whidth, $height, $left){
     height: $height;
+    left: $left;
+    width: $whidth;
 }
 
 @mixin title-img($background-color){
-    display: flex;
     background-color: $background-color;
+    display: flex;
     justify-content: center;
 }
 
 @mixin background-img ($url-img, $height){
-    position: relative;
     min-height: $height;
+    position: relative;
     background: {
+        image: url($url-img);
         position-x: center;
         repeat: no-repeat;
-        image: url($url-img)
     }
 }
 
 @mixin description-square($top, $left, $width){
+    background-color: $white-color;
     font-family: 'Open Sans',sans-serif;
     font-size: 1rem;
-    line-height: 1.6;
-    top: $top;
     left: $left;
-    word-wrap: break-word;
+    line-height: 1.6;
     position: absolute;
-    background-color: $white-color;
+    top: $top;
     width: $width;
+    word-wrap: break-word;
 }
 @mixin link-square($bottom, $left){
-    font-family: Ubuntu, sans-serif;
-    text-decoration: none;
-    color: $primary-color;
-    position: absolute;
     bottom: $bottom;
-    left: $left;
+    color: $primary-color;
+    font-family: Ubuntu, sans-serif;
     font-size: 0.875rem;
+    left: $left;
     letter-spacing: 3px;
-    
+    position: absolute;
+    text-decoration: none;
 }

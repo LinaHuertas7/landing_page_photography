@@ -2,28 +2,93 @@
   background-color: $tertiary-color;
   min-height: 500px;
   padding: 3rem 0rem 0rem;
-  &__recommendations {
-    margin: 0rem 0.5rem;
-    min-height: 674px;
+
+  @include responsive (768px){
+    grid-template-columns: repeat(4, 1fr);
+    display: grid;
+  }
+  &__containerFig{
     position: relative;
-    background: {
-      image: url('../img/projects__background__img.jpeg');
-      position-x: center;
-      repeat: no-repeat;
-      size: 282%;
+    @include responsive (768px){
+      grid-column: 1/4;
+      grid-row: 1;
+      width: 84%;
+    }
+  }
+  &__figure {
+    width: 95%;
+    min-height: 546px;
+    overflow: hidden;
+    margin: 0rem 0.5rem;
+    @include responsive (768px) {
+      width: 94%;
+      margin: 0rem 1rem 0rem 1rem;
+    }
+  }
+  &__background{
+    @include responsive (768px){
+      @include properties-size(52%, 0, 43%);
+      height: 43%;
+    }
+  }
+  &__figImg{
+    width: 287%;
+    position: relative;
+    right: 95%;
+
+    @include responsive(768px){
+      width: 206%;
+      right: 50%;
+    }
+    @include responsive(1024px){
+      width: 152%;
+      right: 27%;
+    }
+  }
+  &__img--title{
+    @include responsive(768px){
+      width: 51%;
+    }
+    @include responsive(1024px){
+      width: 39%;
     }
   }
   &__side {
     @include title-img(#34421e);
     margin: 1.5rem 0.5rem 0rem;
     padding: 6.5rem 0rem;
+
+    @include responsive(768px){
+      grid-row: 1;
+      grid-column: 3/5;
+      margin: 0rem 1rem 0rem 7rem;
+      height: 78%;
+      align-items: center;
+      width: 62%;
+    }
+    @include responsive(1024px){
+      margin: 0rem 1rem 0rem 10rem;
+    }
   }
-  &__description {
-    @include description-square(46%, true, false, 85%);
-    padding: 2rem 0rem 4.7rem 0.5rem;
+  &__recomendations {
+    @include description-square(false, true, false, 87%);
+    padding: 2rem 1rem;
+    bottom: 0%;
+    @include responsive (768px) {
+      width: 75%;
+      left: 3%;
+    }
+    @include responsive (1024px) {
+      width: 69%;
+      left: 2%;
+    }
+  }
+  &__description{
+    margin-bottom: 2rem;
   }
   &__link {
-    @include link-square(5%, 2%);
+    @include link-square();
+    margin-bottom: 2rem;
   }
   &__information {
     align-items: center;
@@ -34,6 +99,15 @@
     margin-top: 10rem;
     min-height: 565px;
     text-align: center;
+    @include responsive (768px) {
+      grid-column: 1/3;
+      grid-row: 2;
+      margin-top: 3rem;
+    }
+    @include responsive (1024px) {
+      display: flex;
+      justify-content: center;
+    }
   }
   &__group {
     margin: 7rem 0rem 1rem;
@@ -55,13 +129,30 @@
       family: 'Open Sans', sans-serif;
       size: 1rem;
     }
+    @include responsive(1024px){
+      width: 68%;
+    }
   }
   &__sideInformation {
     min-height: 569px;
-    background: {
-      image: url('../img/projects__information__basquetbol.jpeg');
-      position-x: right;
-      size: cover;
+    overflow: hidden;
+    width: 100%;
+    @include responsive (768px){
+      grid-column: 3/5;
+      grid-row: 2;
+    }
+  }
+  &__sideInfoImg{
+    width: 287%;
+    right: 166%;
+    position: relative;
+    @include responsive(768px){
+      width: 246%;
+      right: 136%;
+    }
+    @include responsive(1024px){
+      width: 179%;
+      right: 78%;
     }
   }
 }

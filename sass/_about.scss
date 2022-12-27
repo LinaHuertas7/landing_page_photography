@@ -1,19 +1,75 @@
 .about {
+  @include responsive(768px){
+    grid-template-columns: 1fr 2fr;
+    display: grid;
+  }
   min-height: 655px;
+  position: relative;
   &__side {
     @include title-img(#c19434);
     margin: 2.5rem 0.5rem 5rem;
     padding: 8.5rem 0rem;
+    @include responsive(768px) {
+      margin: 3rem 1rem 5rem;
+      height: 60%;
+      align-items: center;
+    }
+    @include responsive(1024px) {
+      height: 69%;
+      margin: 3rem 1.5rem 5rem;
+      align-items: center;
+      padding: 0;
+    }
+  }
+  &__image{
+    @include responsive(768px){
+      width: 52%;
+    }
+    @include responsive(1024px){
+      width: 45%;
+    }
+  }
+  &__figure{
+    width: 95%;
+    min-height: 645px;
+    overflow: hidden;
+    margin: 0rem 0.5rem;
+    @include responsive(768px){
+      width: 93%;
+      margin: 3rem 0.5rem 0rem;
+    }
+  }
+  &__figImg{
+    width: 287%;
+    position: relative;
+    right: 95%;
+    margin-bottom: 3rem;
+    @include responsive(768px){
+      width: 198%;
+      right: 51%;
+    }
+    @include responsive(1024px){
+      width: 145%;
+      right: 24%;
+    }
   }
   &__background {
-    @include background-img('../img/about__background__img.jpeg', 726px);
-    margin: 8rem 0.5rem 3rem;
+    @include description-square(71%, false, true,88%);
+    height: 29%;
+    padding: 2rem 1rem;
+    @include responsive(768px){
+      @include properties-size(52%, 0, 43%);
+      height: 43%;
+    }
+    @include responsive(1024px){
+      @include properties-size(56%, 34px, 38%);
+      height: 38%;
+    }
   }
   &__description {
-    @include description-square(50%, false, true, 85%);
-    padding: 2rem 0.5rem 7rem;
+    margin-bottom: 1rem;
   }
   &__link {
-    @include link-square(9%, 17%);
+    @include link-square();
   }
 }

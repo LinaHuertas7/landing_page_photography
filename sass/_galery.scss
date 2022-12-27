@@ -1,16 +1,35 @@
 .galery {
+  position: relative;
   &__information {
     background-color: $secondary-color;
-    margin-top: 9rem;
+    margin-top: 11rem;
     min-height: 780px;
-    padding: 15rem 1rem 0rem 2rem;
-    position: relative;
+    padding: 19rem 1rem 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include responsive(768px){
+      align-items: center;
+      display: grid;
+      grid-column-gap: 2rem;
+      grid-template-columns: repeat(2, 50%);
+      min-height: 473px;
+      padding: 4rem 6rem 0rem 9rem;
+    }
+    @include responsive(1024px){
+      min-height: 441px;
+      padding: 4rem 10rem 0rem 11rem;
+    }
   }
   &__title {
-    @extend .services__title;
-    left: 7% !important;
-    top: -17% !important;
-    width: 86% !important;
+    @include cursive_title(-4%, 7%, 86%);
+    @include responsive(768px){
+      @include properties-size(-7.5%,10%,77%);
+      font-size: 1.875rem;
+    }
+    @include responsive(1024px){
+      @include properties-size(-5%,13%,74%);
+    }
   }
   &__descriptionInfo {
     color: $white-color;
@@ -23,48 +42,152 @@
   &__groupImg {
     max-width: 100vw;
     overflow: hidden;
+    @include responsive(768px){
+      display: grid;
+      grid-template-areas: "cicycle woman"
+                          "car jacket";
+    }
+    @include responsive(1024px){
+      display: grid;
+      grid-template-areas: "cicycle woman car jacket";
+    }
+  }
+  &__containerImg{
+    overflow: hidden;
+    width: 100%;
+    &--car{
+      margin-top: -0.5rem;
+    }
+    &--jacket{
+      margin-top: -4.5rem;
+      @include responsive(768px){
+        margin-top: -0.5rem;
+        z-index: 0;
+        height: 419px;
+      }
+    }
   }
   &__img {
     position: relative;
-    &--one {
+    &--cicycle {
       @include image(124%, auto, -54px);
+      @include responsive(768px){
+        @include image(129%, auto, -62px);
+      }
+      @include responsive(1024px){
+        @include image(196%, auto, -126px);
+      }
     }
-    &--two {
+    &--woman {
       @include image(131%, auto, -62px);
+      @include responsive(768px){
+        @include image(130%, auto, -62px);
+      }
+      @include responsive(1024px){
+        @include image(195%, auto, -114px);
+      }
     }
-    &--three {
+    &--car {
       @include image(117%, auto, -37px);
-      margin-top: -0.5rem;
+      @include responsive(768px){
+        @include image(115%, auto, -26px);
+      }
+      @include responsive(1024px){
+        @include image(178%, auto, -103px);
+      }
     }
-    &--four {
-      @include image(117%, 460px, -63px);
-      margin-top: -4.5rem;
+    &--jacket {
+      @include image(122%, 460px, -63px);
       z-index: -1;
+      top: -26px;
+      @include responsive(768px){
+        @include image(119%, 539px, -63px);
+      }
+      @include responsive(1024px){
+        @include image(127%, 397px, -63px);
+      }
     }
   }
   &__service {
+    position: relative;
     background-color: #f2f2f2;
     margin-top: -6rem;
     min-height: 558px;
     padding-bottom: 3rem;
     padding-top: 3rem;
+    @include responsive (768px){
+      grid-template-columns: 1fr 2fr;
+      display: grid;
+      gap: 1rem;
+    }
   }
   &__side {
     @include title-img(#c19434);
     margin: 0rem 0.5rem 0rem;
     padding: 8rem 0rem;
+    @include responsive(768px){
+      height: 80%;
+      align-items: center;
+      padding: 0;
+      margin-left: 1rem;
+    }
+
+  }
+  &__titleImg{
+    @include responsive(768px){
+      width: 49%;
+      height: 64%;
+    }
+    @include responsive(1024px){
+      width: 45%;
+      height: 76%;
+    }
   }
   &__background {
-    @include background-img('../img/galery__background__img.jpeg', 698px);
-    background-position-y: 70%;
-    background-size: 296%;
+    min-height: 558px;
     margin: 8rem 0.5rem 0rem;
+    position: relative;
+    overflow: hidden;
+    width: 95%;
+    @include responsive(768px){
+      margin: 0;
+    }
   }
-  &__description {
-    @include description-square(52%, false, true, 237px);
-    padding: 3rem 0rem 5.2rem 0.5rem;
+  &__backImg{    
+    width: 298%;
+    right: 101%;
+    position: relative;
+    @include responsive(768px){
+      width: 192%;
+      right: 45%;
+    }
+    @include responsive(1024px){
+      width: 142%;
+      right: 16%;
+    }
+  }
+  &__infoWoman {
+    @include description-square(71.5%, false, true, 68%);
+    display: flex;
+    flex-direction: column;
+    height: 25.2%;
+    justify-content: center;
+    padding: 0rem 0.5rem;
+    right: 8px;
+    @include responsive(768px){
+      padding: 0rem 0.7rem;
+      @include properties-size(51.5%, 24px, 37%);
+      height: 39.2%;
+    }
+    @include responsive(1024px){
+      @include properties-size(51.5%, 33px, 34%);
+      height: 39.2%;
+    }
+  }
+  &__description{
+    margin-bottom: 1rem;
   }
   &__link {
-    @include link-square(4%, 37%);
+    @include link-square();
   }
 }

@@ -44,13 +44,38 @@
     right: 0;
   }
 }
-@mixin link-square($bottom, $left) {
-  bottom: $bottom;
+@mixin link-square() {
   color: $primary-color;
   font-family: Ubuntu, sans-serif;
   font-size: 0.875rem;
-  left: $left;
   letter-spacing: 3px;
-  position: absolute;
   text-decoration: none;
+}
+
+@mixin cursive_title($top, $right, $whidth){
+  background-color: $white-color;
+  right: $right;
+  line-height: 1.2;
+  padding: 2rem 1rem 0rem;
+  position: absolute;
+  text-align: center;
+  top: $top;
+  width: $whidth;
+  font: {
+    family: $cursive-font-family;
+    size: 1.5rem;
+    weight:400;
+  }
+}
+
+@mixin properties-size($top, $rigth, $whidth){
+  top: $top;
+  right: $rigth;
+  width: $whidth;
+}
+
+@mixin responsive($whidth) {
+  @media (min-width: $whidth) { 
+    @content; 
+  }
 }

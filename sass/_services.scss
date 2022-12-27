@@ -2,29 +2,57 @@
     background-color: $secondary-color;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     min-height: 655px;
-    padding: 3rem 1rem 0rem 3rem;
+    padding: 15rem 1rem 4rem 3rem;
     position: relative;
-        &__title{
-        background-color: $white-color;
-        left: 11%;
-        line-height: 1.2;
-        padding: 2rem 1rem 0rem;
-        position: absolute;
-        text-align: center;
-        top: -15%;
-        width: 86%;
-        font: {
-            family: $cursive-font-family;
-            size: 1.5rem;
-            weight:400;
+    @include responsive(768px){
+        align-content: center;
+        align-items: center;
+        display: grid;
+        grid-column-gap: 2rem;
+        grid-template-columns: repeat(2, 50%);
+        justify-items: center;
+        margin-top: 6rem;
+        min-height: 401px;
+        padding: 5rem 8rem 0rem 7rem;
+    }
+    @include responsive(1024px){
+        padding: 5rem 13rem 0rem 10rem;
+    }
+    &__title{
+    @include cursive_title(-15%, 4%, 86%);
+    @include responsive(768px){
+        @include properties-size(-24%, 11%, 77%);
+        font-size: 1.875rem;
+    }
+    @include responsive(1024px){
+        @include properties-size(-20%, 14%, 74%);
+    }
+    }
+    &__information{
+        @include responsive(768px){
+            justify-content: flex-start;
         }
+    &__img{
+        @include responsive(768px){
+            width: 162%;
+        }
+    }
+    &__side{
+        @include responsive(768px){
+            min-height: 658px;
+        }
+    }
+    &__indicationImg{
+        @include responsive(768px){
+            margin-top: 5rem;
+        }
+    }
     }
     &__description{
         color: $tertiary-color;
         line-height: 1.6;
-        margin-top: 6rem;
         word-wrap: break-word;
         font: {
             family: 'Open Sans',sans-serif;

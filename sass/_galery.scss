@@ -103,6 +103,15 @@
       @include responsive(1024px){
         height: 433px;
       }
+      @include responsive(1250px){
+        height: 402px;
+      }
+      @include responsive(1440px){
+        height: 435px;
+      }
+      @include responsive(1700px){
+        height: 502px;
+      }
     }
   }
   &__img {
@@ -117,6 +126,9 @@
       }
       @include responsive(1024px){
         @include image(196%, auto, -126px);
+      }
+      @include responsive(1250px){
+        @include image(142%, auto, -83px);
       }
       @include responsive(1440px){
         @include image(135%, auto, -68px);
@@ -136,6 +148,9 @@
       @include responsive(1024px){
         @include image(195%, auto, -114px);
       }
+      @include responsive(1250px){
+        @include image(157%, auto, -79px);
+      }
       @include responsive(1440px){
         @include image(141%, auto, -58px);
       }
@@ -153,6 +168,9 @@
       }
       @include responsive(1024px){
         @include image(178%, auto, -103px);
+      }
+      @include responsive(1250px){
+        @include image(131%, auto, -53px);
       }
       @include responsive(1440px){
         @include image(124%, auto, -46px);

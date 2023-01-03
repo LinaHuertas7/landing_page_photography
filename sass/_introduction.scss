@@ -14,11 +14,12 @@
     justify-content: center;
     min-height: 566px;
     padding: 1rem;
-  /*   @include responsive(375px){
-      padding: 14rem 1rem 4rem 2rem;
-    } */
     @include responsive(768px){
       justify-content: flex-start;
+    }
+    @include responsive(1440px){
+      align-items: flex-start;
+      padding-left: 6rem;
     }
   }
 
@@ -26,11 +27,16 @@
     height: auto;
     overflow: hidden;
     width: 75%;
-    @include responsive(768px){
-      margin-top: 5rem;
+    @include responsive(600px){
+      width: 61%;
     }
     @include responsive(768px){
+      margin-top: 5rem;
       width: 81%;
+    }
+    @include responsive(1875px){
+      margin-top: 5rem;
+      width: 57%;
     }
   }
 
@@ -39,14 +45,20 @@
     left: -52px;
     position: relative;
     width: 146%;
+    @include responsive(500px){
+      left: -10px;
+      width: 110%;
+    }
     @include responsive(768px){
       width: 162%;
     }
     @include responsive(1024px){
       left: -90px;
     }
+    @include responsive(1440px){
+      width: 133%;
+    }
   }
-
   &__title{
     color: $white-color;
     letter-spacing: 3px;
@@ -58,7 +70,6 @@
       weight:550;
     }
   }
-
   &__description{
     color: $white-color;
     text-align: center;
@@ -68,9 +79,6 @@
       size: 1rem;
       weight: 400;
     }
-    /* @include responsive(375px){
-      margin-bottom: 3rem;
-    } */
   }
 
   &__side {
@@ -95,17 +103,22 @@
       right: 0%;
       top: 0%;
       @include responsive(1024px){
-        left: -2%;
-        bottom: 1%;
         background-size: 414px auto;
+        bottom: 1%;
+        left: -2%;
       }
+      @include responsive(1875px){
+        background-size: 440px auto;
+      }
+    }
+    @include responsive(500px){
+      margin: 0rem auto 4rem;
+      width: 71%;
     }
     @include responsive(768px){
       min-height: 658px;
     }
-    
   }
-
   &__slogan{
     line-height: 1.1;
     margin-top: 6rem;
@@ -117,14 +130,16 @@
     @include responsive(1024px){
       margin-right: 2rem;
     }
+    @include responsive(1440px){
+      margin-right: 10rem;
+    }
   }
-
   &__line{
     border-left: 20px solid $primary-color;
+    bottom: 6%;
     height: 50%;
     left: 84%;
     position: absolute;
-    bottom: 6%;
     @include responsive(1024px){
       bottom: -6%;
     }

@@ -1,23 +1,38 @@
 .about {
-  @include responsive(768px){
-    grid-template-columns: 1fr 2fr;
-    display: grid;
-  }
   min-height: 655px;
   position: relative;
+  @include responsive(768px){
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  @include responsive(1440px){
+    margin: 0 auto;
+    max-width: 79%;
+  }
+  @include responsive(1875px){
+    max-width: 69%;
+  }
   &__side {
     @include title-img(#c19434);
     margin: 2.5rem 0.5rem 5rem;
     padding: 8.5rem 0rem;
+    @include responsive(500px){
+      margin: 3.5rem auto;
+      width: 73%;
+    } 
+    @include responsive(600px){
+      margin: 3.5rem auto 9rem;
+      width: 87%;
+    } 
     @include responsive(768px) {
-      margin: 3rem 1rem 5rem;
-      height: 60%;
       align-items: center;
+      height: 60%;
+      margin: 3rem 2rem 5rem;
     }
     @include responsive(1024px) {
+      align-items: center;
       height: 69%;
       margin: 3rem 1.5rem 5rem;
-      align-items: center;
       padding: 0;
     }
   }
@@ -28,42 +43,77 @@
     @include responsive(1024px){
       width: 45%;
     }
+    @include responsive(1440px){
+      width: 40%;
+    }
   }
   &__figure{
-    width: 95%;
+    margin: 0rem 0.5rem;
     min-height: 645px;
     overflow: hidden;
-    margin: 0rem 0.5rem;
+    width: 95%;
+    @include responsive(500px){
+      margin: 0 auto;
+      width: 73%;
+    }
+    @include responsive(600px){
+      width: 87%;
+    }
     @include responsive(768px){
+      margin: 3rem auto;
       width: 93%;
-      margin: 3rem 0.5rem 0rem;
+    }
+    @include responsive(1024){
+      width: 90%;
     }
   }
   &__figImg{
-    width: 287%;
+    margin-bottom: 3rem;
     position: relative;
     right: 95%;
-    margin-bottom: 3rem;
+    width: 287%;
+    @include responsive(600px){
+      right: 45%;
+      width: 194%;
+    }
     @include responsive(768px){
-      width: 198%;
       right: 51%;
+      width: 198%;
     }
     @include responsive(1024px){
-      width: 145%;
       right: 24%;
+      width: 152%;
+    }
+    @include responsive(1440px){
+      right: 12%;
+      width: 127%;
     }
   }
   &__background {
     @include description-square(71%, false, true,88%);
     height: 29%;
     padding: 2rem 1rem;
+    @include responsive(500px){
+      @include properties-size(69%, 59px, 60%);
+      height: 29%;
+    }
+    @include responsive(600px){
+      @include properties-size(71%, 38px, 49%);
+      height: 26%;
+    }
     @include responsive(768px){
       @include properties-size(52%, 0, 43%);
       height: 43%;
     }
     @include responsive(1024px){
-      @include properties-size(56%, 34px, 38%);
-      height: 38%;
+      @include properties-size(47%, 19px, 38%);
+      display: flex;
+      flex-direction: column;
+      height: 44%;
+      justify-content: center;
+    }
+    @include responsive(1440px){
+      width: 38%;
     }
   }
   &__description {

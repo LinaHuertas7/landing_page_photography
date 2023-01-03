@@ -1,8 +1,8 @@
 @mixin position($sticky) {
-  -webkit-position: $sticky;
   -moz-position: $sticky;
   -ms-position: $sticky;
   -o-position: $sticky;
+  -webkit-position: $sticky;
   position: $sticky;
 }
 
@@ -54,10 +54,10 @@
 
 @mixin cursive_title($top, $right, $whidth){
   background-color: $white-color;
-  right: $right;
   line-height: 1.2;
   padding: 2rem 1rem 0rem;
   position: absolute;
+  right: $right;
   text-align: center;
   top: $top;
   width: $whidth;
@@ -69,8 +69,8 @@
 }
 
 @mixin properties-size($top, $rigth, $whidth){
-  top: $top;
   right: $rigth;
+  top: $top;
   width: $whidth;
 }
 

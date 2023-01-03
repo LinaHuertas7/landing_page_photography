@@ -2,12 +2,27 @@
   position: relative;
   &__information {
     background-color: $secondary-color;
-    margin-top: 11rem;
-    min-height: 780px;
-    padding: 19rem 1rem 4rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 11rem;
+    min-height: 780px;
+    padding: 19rem 1rem 4rem 2rem;
+    @include responsive (375px) {
+      padding: 14rem 1rem 4rem 2rem;
+    }
+    @include responsive (425px) {
+      min-height: 672px;
+      padding: 11rem 1rem 4rem 2rem;
+    }
+    @include responsive (500px) {
+      min-height: 597px;
+      padding: 9rem 4rem 4rem 4rem;
+    }
+    @include responsive (600px) {
+      min-height: 567px;
+      padding: 3rem 4rem 1rem 5rem;
+    }
     @include responsive(768px){
       align-items: center;
       display: grid;
@@ -20,15 +35,35 @@
       min-height: 441px;
       padding: 4rem 10rem 0rem 11rem;
     }
+    @include responsive(1440PX){
+      padding: 4rem 16rem 0rem 19rem;
+    }
+    @include responsive(1875px){
+      padding: 4rem 35rem 0rem 31rem;
+    }
   }
   &__title {
     @include cursive_title(-4%, 7%, 86%);
+    @include responsive(500px){
+      top: -3%;
+    }
+    @include responsive(500px){
+      right: 10%;
+      width: 79%;
+    }
     @include responsive(768px){
       @include properties-size(-7.5%,10%,77%);
       font-size: 1.875rem;
     }
     @include responsive(1024px){
       @include properties-size(-5%,13%,74%);
+    }
+    @include responsive(1440px){
+      @include properties-size(-6%,19%,64%);
+      padding-bottom: 2rem;
+    }
+    @include responsive(1875px){
+      @include properties-size(-6%,27%,49%);
     }
   }
   &__descriptionInfo {
@@ -61,9 +96,12 @@
     &--jacket{
       margin-top: -4.5rem;
       @include responsive(768px){
+        height: 441px;
         margin-top: -0.5rem;
         z-index: 0;
-        height: 419px;
+      }
+      @include responsive(1024px){
+        height: 433px;
       }
     }
   }
@@ -71,117 +109,200 @@
     position: relative;
     &--cicycle {
       @include image(124%, auto, -54px);
+      @include responsive(500px){
+        @include image(111%, auto, -38px);
+      }
       @include responsive(768px){
         @include image(129%, auto, -62px);
       }
       @include responsive(1024px){
         @include image(196%, auto, -126px);
       }
+      @include responsive(1440px){
+        @include image(135%, auto, -68px);
+      }
+      @include responsive(1875px){
+        @include image(109%, auto, -43px);
+      }
     }
     &--woman {
       @include image(131%, auto, -62px);
+      @include responsive(500px){
+        @include image(104%, auto, -2px);
+      }
       @include responsive(768px){
         @include image(130%, auto, -62px);
       }
       @include responsive(1024px){
         @include image(195%, auto, -114px);
       }
+      @include responsive(1440px){
+        @include image(141%, auto, -58px);
+      }
+      @include responsive(1875px){
+        @include image(111%, auto, -24px);
+      }
     }
     &--car {
       @include image(117%, auto, -37px);
+      @include responsive(500px){
+        @include image(103%, auto, -7px);
+      }
       @include responsive(768px){
         @include image(115%, auto, -26px);
       }
       @include responsive(1024px){
         @include image(178%, auto, -103px);
       }
+      @include responsive(1440px){
+        @include image(124%, auto, -46px);
+      }
+      @include responsive(1875px){
+        @include image(110%, auto, -46px);
+      }
     }
     &--jacket {
       @include image(122%, 460px, -63px);
-      z-index: -1;
       top: -26px;
+      z-index: -1;
+      @include responsive(500px){
+        @include image(114%, 521px, -63px);
+      }
       @include responsive(768px){
         @include image(119%, 539px, -63px);
       }
       @include responsive(1024px){
-        @include image(127%, 397px, -63px);
+        @include image(127%, 442px, -63px);
+      }
+      @include responsive(1440px){
+        @include image(127%, 482px, -63px);
+      }
+      @include responsive(1440px){
+        @include image(135%, 482px, -63px);
       }
     }
   }
   &__service {
-    position: relative;
     background-color: #f2f2f2;
     margin-top: -6rem;
     min-height: 558px;
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+    padding: 3rem 1rem 4rem;
+    position: relative;
     @include responsive (768px){
-      grid-template-columns: 1fr 2fr;
       display: grid;
-      gap: 1rem;
+      gap: 0rem 1rem;
+      grid-template-columns: 1fr 2fr;
+    }
+    @include responsive (1440px){
+      gap: 0rem 0rem;
+      justify-items: center;
     }
   }
   &__side {
     @include title-img(#c19434);
-    margin: 0rem 0.5rem 0rem;
     padding: 8rem 0rem;
-    @include responsive(768px){
-      height: 80%;
-      align-items: center;
-      padding: 0;
-      margin-left: 1rem;
+    @include responsive(500px){
+      margin: 0 auto;
+      width: 73%;
     }
-
+    @include responsive(768px){
+      align-items: center;
+      height: 80%;
+      margin-left: 1rem;
+      padding: 0;
+      width: 90%;
+    }
+    @include responsive(1440px){
+      margin-right: -95px;
+      width: 66%;
+    }
+    @include responsive(1875px){
+      margin-right: -352px;
+      width: 44%;
+    }
   }
   &__titleImg{
     @include responsive(768px){
-      width: 49%;
       height: 64%;
+      width: 49%;
     }
     @include responsive(1024px){
-      width: 45%;
       height: 76%;
+      width: 45%;
     }
   }
   &__background {
-    min-height: 558px;
     margin: 8rem 0.5rem 0rem;
-    position: relative;
+    min-height: 558px;
     overflow: hidden;
-    width: 95%;
+    position: relative;
+    width: 99%;
+    @include responsive(500px){
+      margin: 8rem auto 0rem;
+      width: 73%;
+    }
     @include responsive(768px){
       margin: 0;
+      width: 99%;
+    }
+    @include responsive(1875px){
+      width: 82%;
     }
   }
   &__backImg{    
-    width: 298%;
-    right: 101%;
     position: relative;
+    right: 101%;
+    width: 298%;
     @include responsive(768px){
-      width: 192%;
       right: 45%;
+      width: 192%;
     }
     @include responsive(1024px){
-      width: 142%;
       right: 16%;
+      width: 142%;
+    }
+    @include responsive(1440px){
+      right: 12%;
+      width: 94%;
+    }
+    @include responsive(1875px){
+      width: 87%;
     }
   }
   &__infoWoman {
-    @include description-square(71.5%, false, true, 68%);
+    @include description-square(false, false, true, 68%);
+    bottom: 68px;
     display: flex;
     flex-direction: column;
     height: 25.2%;
     justify-content: center;
     padding: 0rem 0.5rem;
-    right: 8px;
+    right: 10px;
+    @include responsive(500px){
+      @include properties-size(false, 15.5%, 47%);
+      bottom: 67px;
+      height: 24.2%;
+    }
+    @include responsive(600px){
+      right: 15%;
+    }
     @include responsive(768px){
-      padding: 0rem 0.7rem;
-      @include properties-size(51.5%, 24px, 37%);
+      @include properties-size(false, 21px, 37%);
+      bottom: 68px;
       height: 39.2%;
+      padding: 0rem 0.7rem;
     }
     @include responsive(1024px){
-      @include properties-size(51.5%, 33px, 34%);
+      @include properties-size(false, 0, 34%);
       height: 39.2%;
+      right: 22px;
+    }
+    @include responsive(1440px){
+      right: 187px;
+    }
+    @include responsive(1875px){
+      right: 377px;
+      width: 26%;
     }
   }
   &__description{
